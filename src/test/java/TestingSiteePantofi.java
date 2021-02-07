@@ -40,7 +40,6 @@ public class TestingSiteePantofi {
         System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
-
     //Test cases "SearchWebpage"
 
     //Test case_1: Home page - Test the button "country language"
@@ -112,8 +111,6 @@ public class TestingSiteePantofi {
         secondWebPage.clickFilterBarbati();
     }
 
-    //Trebuie sa refac cu CSS_Selector pentru ca poate selecta de la alt filtru
-
     //Test case_8: Columbia product page - Test selection of filter "Impermeabilitate"
     @Test(testName = "Select filter 'Impermeabilitate'")
     public static void selectFilterImpermeabilitate(){
@@ -124,8 +121,8 @@ public class TestingSiteePantofi {
         secondWebPage.clickFilterImpermeabilitate();
     }
 
-    //Test case_8: Columbia product page - Test selection of filter "Size
-    @Test(testName = "Select filter 'Size'")
+    //Test case_8: Columbia product page - Test selection of filter "Size:27"
+    @Test(testName = "Select filter 'Size:27'")
     public static void selectFilterSize(){
         driver.get(Utils.BASE_URL);
         NavigateToPageTwo();

@@ -4,23 +4,31 @@ import org.openqa.selenium.support.FindBy;
 
 public class SecondWebPage extends PageInitializing{
 
-    @FindBy(xpath = "//*[@id=\"top\"]/body/div[3]/div/div[3]/div[2]/div[1]/div/ul/li[2]/a")
+    //Este OK cu XPath, dar dar am facut cu CSS Selector pentru a nu-si schimba ordinea
+    //@FindBy(xpath = "//*[@id=\"top\"]/body/div[3]/div/div[3]/div[2]/div[1]/div/ul/li[2]/a")
+
+    //Am facut cu CSS Selector pentru a-si pastra ordinea: OK
+    @FindBy(css = "body > div.one-col-wrapper > div > div.category-grid__filters > div.filters-container > div.sidebar-section.filter-link > div > ul > li:nth-child(2) > a")
     private WebElement filterBarbati;
 
 
-    //Este OK XPath, incerc cu CSS Selector pentru ca isi schimba ordinea
-    @FindBy(xpath = "//*[@id=\"top\"]/body/div[3]/div/div[3]/div[2]/div[12]/div/ul/li/a")
+    //Este OK cu XPath, dar am facut cu CSS Selector pentru ca isi schimba ordinea
+    //@FindBy(xpath = "//*[@id=\"top\"]/body/div[3]/div/div[3]/div[2]/div[12]/div/ul/li/a")
 
-    //Trebuie sa fac dupa CSS Selector (nu reusesc)
-    //@FindBy(css = "")
+    //Am facut cu CSS Selector pentru a-si pastra ordinea: OK
+    @FindBy(css = "body > div.one-col-wrapper > div > div.category-grid__filters > div.filters-container > div.sidebar-section.sidebar-section--wodoodpornosc > div > ul > li > a")
     private WebElement filterImpermeabilitate;
 
 
-    @FindBy(xpath = "//*[@id=\"top\"]/body/div[3]/div/div[3]/div[2]/div[2]/div/ul/li[3]/a")
+    //Este OK cu XPath, dar am facut cu CSS Selector pentru a nu-si schimba ordinea
+    //@FindBy(xpath = "//*[@id=\"top\"]/body/div[3]/div/div[3]/div[2]/div[2]/div/ul/li[3]/a")
+
+    //Am facut cu CSS Selector pentru a-si pastra ordinea: OK
+    @FindBy(css = "body > div.one-col-wrapper > div > div.category-grid__filters > div.filters-container > div.sidebar-section.sidebar-section--size.filter-grid > div > ul > li:nth-child(3) > a")
     private WebElement filterSize;
 
 
-    //Este OK XPath, dar am facut si cu CSS Selector
+    //Este OK cu XPath, dar am facut cu CSS Selector pentru a nu-si schimba ordinea
     //@FindBy(xpath = "//*[@id=\"top\"]/body/div[3]/div/div[4]/ul/li[1]/div/a/h2/span[1]")
 
     //Varianta cu CSS_Selector OK (primul produs din lista "Columbia")
