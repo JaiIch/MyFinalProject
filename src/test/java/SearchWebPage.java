@@ -6,6 +6,7 @@ public class SearchWebPage extends PageInitializing{
     private final String SEARCH_STRING = "Columbia";
     private final String INVALID_SEARCH_STRING = "qwertyuiopasdfghjkl";
 
+
     @FindBy(xpath = "//*[@id=\"top\"]/body/header/div[4]/div[1]/form/input")
     private WebElement searchField;
 
