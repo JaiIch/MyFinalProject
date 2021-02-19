@@ -4,6 +4,11 @@ import org.openqa.selenium.support.FindBy;
 
 public class SecondWebPage extends PageInitializing{
 
+
+    @FindBy(xpath = "//*[@id=\"top\"]/body/header/div[4]/a")
+    private WebElement returnToHomePage;
+
+
     //Este OK cu XPath, dar dar am facut cu CSS Selector pentru a nu-si schimba ordinea
     //@FindBy(xpath = "//*[@id=\"top\"]/body/div[3]/div/div[3]/div[2]/div[1]/div/ul/li[2]/a")
 
@@ -12,11 +17,13 @@ public class SecondWebPage extends PageInitializing{
     private WebElement filterBarbati;
 
 
-    //Este OK cu XPath, dar am facut cu CSS Selector pentru ca isi schimba ordinea
-    //@FindBy(xpath = "//*[@id=\"top\"]/body/div[3]/div/div[3]/div[2]/div[12]/div/ul/li/a")
+    //Am facut cu CSS Selector (copiere link) pentru a-si pastra ordinea: varianta OK (pusa si pe GitHUb)
+    //@FindBy(css = "body > div.one-col-wrapper > div > div.category-grid__filters > div.filters-container > div.sidebar-section.sidebar-section--wodoodpornosc > div > ul > li > a")
+    //private WebElement filterImpermeabilitate;
 
-    //Am facut cu CSS Selector pentru a-si pastra ordinea: OK
-    @FindBy(css = "body > div.one-col-wrapper > div > div.category-grid__filters > div.filters-container > div.sidebar-section.sidebar-section--wodoodpornosc > div > ul > li > a")
+
+    //Am testat _ cautare cale manual dupa CSS Selector _ dupa Mozilla Firefox : OK _ ramane asa
+    @FindBy(css = ".filters-container > div:nth-child(15) > div > ul > li > a")
     private WebElement filterImpermeabilitate;
 
 
@@ -38,6 +45,8 @@ public class SecondWebPage extends PageInitializing{
 
 
     public SecondWebPage(WebDriver driver) {super(driver); }
+
+    public void clickReturnToHomePage() {this.returnToHomePage.click();}
 
     public void clickFilterBarbati() {this.filterBarbati.click(); }
 
