@@ -17,11 +17,11 @@ public class SearchWebPage extends PageInitializing{
     private WebElement searchEmptyShoppingCart;
 
 
-    //In lucru pt ca nu mai functioneaza_test aditional !!!!!!!!!!!!
-    //@FindBy(css = "body > footer > div > div.footer__top-bar > div.footer__social > div:nth-child(2) > a > svg > path.bg)")
-    @FindBy(xpath = "//*[@id=\"top\"]/body/footer/div/div[1]/div[2]/div[2]/a/svg/path[3]")
-    private WebElement selectFacebookPage;
+    @FindBy(xpath = "//*[@id=\"top\"]/body/header/nav/ul/li[2]/a")
+    private WebElement selectBarbatiLink;
 
+    @FindBy(xpath = "//*[@id=\"top\"]/body/div[3]/div[1]/div[1]/h1")
+    private WebElement searchHeaderText;
 
     @FindBy(xpath = "/html/body/div[6]/div/div/div/section/button[2]")
     private WebElement pupUpAccept;
@@ -37,9 +37,8 @@ public class SearchWebPage extends PageInitializing{
 
     public void searchEmptyShoppingCart(){this.searchEmptyShoppingCart.click(); }
 
-    public void selectFacebookPage(){this.selectFacebookPage.click(); }
+    public void selectBarbatiLink(){this.selectBarbatiLink.click();}
+    public String getHeaderText(){return this.searchHeaderText.getText();}
 
     public void removePupUp() {this.pupUpAccept.click(); }
-
-
 }

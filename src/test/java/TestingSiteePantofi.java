@@ -1,5 +1,7 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -40,20 +42,21 @@ public class TestingSiteePantofi {
         System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
+    
+    //Test cases "SearchWebPage"
 
-    //Test cases "SearchWebpage"
-
-    //Test case_1: Home page - Test the button "Facebook page"         NU MAI FUNCTIONEAZA !!!!!
-    @Test(testName = "Select Facebook page")
-    public static void selectFacebookPage(){
+    //Test case_1: Home page_Barbati page - Check Header text
+    @Test(testName = "Select Trends page")
+    public static void selectTrendsPage(){
         driver.get(Utils.BASE_URL);
         SearchWebPage webPage = new SearchWebPage(driver);
         webPage.removePupUp();
-        webPage.selectFacebookPage();
+        webPage.selectBarbatiLink();
         Utils.WaitForElement(2);
-
+        //Assert.assertEquals(webPage.getHeader(), "Pantofi bărbați");
+        Assert.assertEquals(webPage.getHeaderText(), "Pantofi bărbați");
+        Utils.WaitForElement(2);
     }
-
 
     //Test case_2: Home page - Test the button "Search" without any text
     @Test(testName = "Search field without a product")

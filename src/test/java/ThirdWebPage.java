@@ -8,7 +8,8 @@ public class ThirdWebPage extends PageInitializing{
     @FindBy(xpath = "//*[@id=\"product_addtocart_form\"]/section/div[2]/div/div[6]/div[3]/div/button")
     private WebElement addProductToCart;
 
-    @FindBy(css = ".e-size-picker-popup__wrapper .e-size-picker-popup__options button:first-child")
+    //@FindBy(css = ".e-size-picker-popup__wrapper .e-size-picker-popup__options button:first-child")
+    @FindBy(css = ".e-size-picker__content > div > button:nth-child(1)")
     private WebElement selectProductSize;
 
 

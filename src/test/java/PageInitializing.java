@@ -6,6 +6,7 @@ public class PageInitializing {
 
     public PageInitializing(WebDriver driver){
         this.driver = driver;
+        driver.manage().window().maximize();
         PageFactory.initElements(driver,this);
     }
 }
