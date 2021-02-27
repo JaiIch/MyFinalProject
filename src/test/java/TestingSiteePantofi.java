@@ -42,19 +42,18 @@ public class TestingSiteePantofi {
         System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
-    
+
     //Test cases "SearchWebPage"
 
-    //Test case_1: Home page_Barbati page - Check Header text
-    @Test(testName = "Select Trends page")
-    public static void selectTrendsPage(){
+    //Test case_1: Home page_Sport page - Check Header text
+    @Test(testName = "Select Sport page Check Header Text")
+    public static void selectSportPage(){
         driver.get(Utils.BASE_URL);
         SearchWebPage webPage = new SearchWebPage(driver);
         webPage.removePupUp();
-        webPage.selectBarbatiLink();
+        webPage.selectSportLink();
         Utils.WaitForElement(2);
-        //Assert.assertEquals(webPage.getHeader(), "Pantofi bărbați");
-        Assert.assertEquals(webPage.getHeaderText(), "Pantofi bărbați");
+        Assert.assertEquals(webPage.getHeaderText(), "Încălțăminte sport");
         Utils.WaitForElement(2);
     }
 

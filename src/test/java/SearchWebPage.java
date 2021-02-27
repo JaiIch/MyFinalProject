@@ -17,10 +17,10 @@ public class SearchWebPage extends PageInitializing{
     private WebElement searchEmptyShoppingCart;
 
 
-    @FindBy(xpath = "//*[@id=\"top\"]/body/header/nav/ul/li[2]/a")
-    private WebElement selectBarbatiLink;
+    @FindBy(xpath = "//*[@id=\"top\"]/body/header/nav/ul/li[4]/a")
+    private WebElement selectSportLink;
 
-    @FindBy(xpath = "//*[@id=\"top\"]/body/div[3]/div[1]/div[1]/h1")
+    @FindBy(xpath = "//*[@id=\"top\"]/body/div[3]/div/div[1]/h1")
     private WebElement searchHeaderText;
 
     @FindBy(xpath = "/html/body/div[6]/div/div/div/section/button[2]")
@@ -37,7 +37,7 @@ public class SearchWebPage extends PageInitializing{
 
     public void searchEmptyShoppingCart(){this.searchEmptyShoppingCart.click(); }
 
-    public void selectBarbatiLink(){this.selectBarbatiLink.click();}
+    public void selectSportLink(){this.selectSportLink.click();}
     public String getHeaderText(){return this.searchHeaderText.getText();}
 
     public void removePupUp() {this.pupUpAccept.click(); }
