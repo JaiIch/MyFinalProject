@@ -16,7 +16,6 @@ public class SearchWebPage extends PageInitializing{
     @FindBy(xpath = "//*[@id=\"top\"]/body/header/div[4]/div[3]/div/a/span")
     private WebElement searchEmptyShoppingCart;
 
-
     @FindBy(xpath = "//*[@id=\"top\"]/body/header/nav/ul/li[4]/a")
     private WebElement selectSportLink;
 
